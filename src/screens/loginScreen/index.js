@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import styles from "./styles";
  
-export default function App() {
+export default function App({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
@@ -35,7 +35,7 @@ export default function App() {
       <TouchableOpacity>
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Home')}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
